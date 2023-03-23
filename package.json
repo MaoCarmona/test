@@ -13,8 +13,8 @@
   "author": "Kevin Mauricio Carmona Loaiza",
   "license": "ISC",
   "devDependencies": {
-    "cors": "^2.8.5",
     "mysql2": "^3.2.0",
+    "cors": "^2.8.5",
     "nodemon": "^2.0.19"
   },
   "dependencies": {
