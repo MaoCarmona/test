@@ -21,8 +21,8 @@ const getAllCompleted = () => {
 const create = async (viaje) => {
     try {
         const id =uuid()
-        const query = 'INSERT INTO viajes (id, inicio_latitud, inicio_longitud, destino_latitud, destino_longitud, pasajero_id,fecha_creacion) VALUES (?,?,?,?,?,?,CURRENT_TIMESTAMP); SELECT * FROM viajes WHERE viajes.id = ?;';
-        const values = [id, viaje.inicio_latitud, viaje.inicio_longitud, viaje.destino_latitud, viaje.destino_longitud, viaje.pasajero_id,id];
+        const query = 'INSERT INTO viajes (id, inicio_latitud, inicio_longitud, destino_latitud, destino_longitud, pasajero_id,fecha_creacion) VALUES (?,?,?,?,?,?,CURRENT_TIMESTAMP); ';
+        const values = [id, viaje.inicio_latitud, viaje.inicio_longitud, viaje.destino_latitud, viaje.destino_longitud, viaje.pasajero_id];
         const result = await new Promise((resolve, reject) => {
         connection.query(query, values, (err, result) => {
           if (err) {
