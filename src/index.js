@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+//const cors = require('cors');
 const conductoresRouter = require('./routes/conductoresRouter')
 const usuariosRouter = require('./routes/usuariosRouter')
 const viajesRouter = require('./routes/viajesRouter')
@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Habilitar CORS para todas las solicitudes
-app.use(cors());
+//app.use(cors());
 
 // Definir las rutas
 app.use('/api/conductores', conductoresRouter);
